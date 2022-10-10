@@ -1,6 +1,6 @@
 """
-created by @ZQ_LO
-Idea by @Repthon
+created by @P_J_I
+Idea by @Rickthon
 """
 
 from jepthon import jepiq
