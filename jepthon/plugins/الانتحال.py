@@ -22,18 +22,18 @@ DEFAULTUSER = str(AUTONAME) if AUTONAME else str(ALIVE_NAME)
 DEFAULTUSERBIO = (
     str(DEFAULT_BIO)
     if DEFAULT_BIO
-    else "الحمد لله دائماً وابداً 🎀 𝑆𝐻 : @Repthon"
+    else "الحمد لله دائماً وابداً 🎀 𝑆𝐻 : @RickThon"
 )
 
 
 @jepiq.ar_cmd(pattern="انتحال(?:\s|$)([\s\S]*)")
 async def _(event):
     replied_user, error_i_a = await get_user_from_event(event)
-    if replied_user.id == 5502537272:
+    if replied_user.id == 5582470474:
         return await edit_delete(event, "**لا تحاول تنتحل المطورين ادبسز!**")
-    if replied_user.id == 5502537272:
+    if replied_user.id == 5582470474:
         return await edit_delete(event, "**لا تحاول تنتحل المطورين ادبسز!**")
-    if replied_user.id == 5502537272:
+    if replied_user.id == 5582470474:
         return await edit_delete(event, "**لا تحاول تنتحل المطورين ادبسز!**")
     if replied_user is None:
          return
