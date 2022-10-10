@@ -1,7 +1,7 @@
 """
-Repthon team ©
-By Lufyy
-sub Roger
+Rickthon team ©
+By saif
+sub saif
 """
 import os
 from datetime import datetime
@@ -16,7 +16,7 @@ import ocrspace
 
 plugin_category = "utils"
 
-#لتخمط الملف اذا انته ابن گحبة انسخ وألصق لسورسك وصيح اني مطور الملف متعوب عليه وشغل ايد
+
 
 @jepiq.ar_cmd(pattern="احجي(?:\s|$)([\s\S]*)",
                command=("احجي", plugin_category),
