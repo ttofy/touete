@@ -73,7 +73,7 @@ async def startupmessage():
             Config.CATUBLOGO = await jepiq.tgbot.send_file(
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/9c62339dc499a45a9f718.jpg",
-                caption="⌯︙**بــوت ريك ثون يـعـمـل بـنـجـاح**  ✅ \n⌯︙**قـنـاة الـسـورس**  :  @Repthon",
+                caption="⌯︙**بــوت ريك ثون يـعـمـل بـنـجـاح**  ✅ \n⌯︙**قـنـاة الـسـورس**  :  @Rickthon",
                 buttons=[(Button.url("كروب ريك ثون", "https://t.me/rickthon_group"),)],
             )
     except Exception as e:
