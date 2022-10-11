@@ -85,7 +85,7 @@ async def variable(var):
                 "**⌔∮ تم بنجاح تغيير فار رمز الاسم \n\n❃ جار اعادة تشغيل السورس انتظر من 2-5 دقائق ليتشغل مره اخرى**",
             )
         heroku_var[variable] = vra
-    if exe == "البايو" or exe == "النبذة":
+    if exe == "البايو" or exe == "النبذة" or exe == "بايو":
         variable = "DEFAULT_BIO"
         await asyncio.sleep(1)
         if variable in heroku_var:
@@ -99,7 +99,7 @@ async def variable(var):
                 "**⌔∮ تم بنجاح تغيير فار البايو\n\n❃ جار اعادة تشغيل السورس انتظر من 2-5 دقائق ليتشغل مره اخرى**",
             )
         heroku_var[variable] = vra
-    if exe == "القروب" or exe == "الكروب":
+    if exe == "القروب" or exe == "الكروب" or exe == "كروب":
         variable = "DEFAULT_GROUP"
         await asyncio.sleep(1)
         if variable in heroku_var:
@@ -113,7 +113,7 @@ async def variable(var):
                 "**⌔∮ تم بنجاح تغيير فار الكروب\n\n❃ جار اعادة تشغيل السورس انتظر من 2-5 دقائق ليتشغل مره اخرى**",
             )
         heroku_var[variable] = vra 
-    if exe == "الصورة" or exe == "الصوره":
+    if exe == "الصورة" or exe == "الصوره" or exe == "صورة":
         variable = "DIGITAL_PIC"
         await asyncio.sleep(1)
         if variable in heroku_var:
