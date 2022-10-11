@@ -73,7 +73,7 @@ async def startupmessage():
             Config.CATUBLOGO = await jepiq.tgbot.send_file(
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/9c62339dc499a45a9f718.jpg",
-                caption="⌯︙**بــوت ريك ثون يـعـمـل بـنـجـاح**  ✅ \n⌯︙**قـنـاة الـسـورس**  :  @Rickthon",
+                caption="⌯︙**ســورس ريك ثون يـعـمـل بـنـجـاح**  ✅ \n⌯︙**قـنـاة الـسـورس**  :  @Rickthon",
                 buttons=[(Button.url("كروب ريك ثون", "https://t.me/rickthon_group"),)],
             )
     except Exception as e:
@@ -175,7 +175,7 @@ async def add_bot_to_logger_group(chat_id):
             LOGS.error(str(e))
 
 
-jepthon = {"@rickthon", "@x7_cm", "@rickthon_group", "@P_J_F5", "@IOCB0"}
+jepthon = {"@rickthon", "@x7_cm", "@rickthon_group", "@P_J_F5", "@rickthon2"}
 async def saves():
    for lMl10l in jepthon:
         try:
