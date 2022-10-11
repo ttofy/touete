@@ -3,7 +3,7 @@ from ..Config import Config
 from ..sql_helper.globals import gvarstatus
 from JepIQ.razan.resources.mybot import *
 
-ROZ_PIC = "https://telegra.ph/file/3c595e91d922a8df1fc5c.jpg"
+ROZ_PIC = "https://telegra.ph/file/f83de61e84066d152ba93.jpg"
 
 if Config.TG_BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(events.InlineQuery)
@@ -13,7 +13,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         query = event.text
         await bot.get_me()
         if query.startswith("السورس") and event.query.user_id == bot.uid:
-            buttons = [[Button.url("1- شرح التنصيب", "https://youtu.be/5VBVpjBntTs"), Button.url("2- استخراج ايبيات", "https://my.telegram.org/"),],[Button.url("3- ستخراج تيرمكس", "https://replit.com/@taabn-tabantaba/CodeTelethon-1?v=1"), Button.url("4- بوت فاذر", "http://t.me/BotFather"),],[Button.url("5- رابط التنصيب", "https://heroku.com/deploy?template=https://github.com/rogerpq/ZQ_LO"),],[Button.url("المطـور 👨🏼‍💻", "https://t.me/ZQ_LO"),]]
+            buttons = [[Button.url("1- شرح التنصيب", "https://youtu.be/eXaxtjZPEj8"), Button.url("2- استخراج ايبيات", "https://my.telegram.org/"),],[Button.url("3- ستخراج تيرمكس", "https://replit.com/@DEVIL1/telethonyahya"), Button.url("4- بوت فاذر", "http://t.me/BotFather"),],[Button.url("5- رابط التنصيب", "https://heroku.com/deploy?template=https://github.com/rick1128/RICKTHONS"),],[Button.url("المطـور 👨🏼‍💻", "https://t.me/P_J_I"),]]
             if ROZ_PIC and ROZ_PIC.endswith((".jpg", ".png", "gif", "mp4")):
                 result = builder.photo(ROZ_PIC, text=ROZ, buttons=buttons, link_preview=False)
             elif ROZ_PIC:
