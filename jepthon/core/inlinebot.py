@@ -582,7 +582,7 @@ async def inline_handler(event):  # sourcery no-metrics
         result = types.InputBotInlineResult(
             id=str(uuid4()),
             type="photo",
-            title="jepiq 🧸♥",
+            title="rickiq 🧸♥",
             description="ادخـل كـروب المسـاعدة",
             url="https://t.me/Rickthon_group",
             thumb=photo,
