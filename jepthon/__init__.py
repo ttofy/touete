@@ -10,7 +10,7 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 __version__ = "1.0.0"
 __license__ = "كـتابة وتـعديل فريـق ريك ثون"
 __author__ = "ريك ثون <https://T.ME/Rickthon>"
-__copyright__ = "Repthon TEAM (C) 2020 - 2021  " + __author__
+__copyright__ = "Rickthon TEAM (C)2021 - 2022  " + __author__
 
 jepiq.version = __version__
 jepiq.tgbot.version = __version__
