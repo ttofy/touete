@@ -204,6 +204,7 @@ async def _(event):
 
 
 )
+
 @jepiq.ar_cmd(
     pattern="م20$",
     command=("م20", plugin_category),
