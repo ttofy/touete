@@ -168,7 +168,7 @@ async def reda(event):
         except FloodWaitError:
             return await edit_delete(event, "**انتضر مدة لا تقل عن 5 دقائق للانتحال مجدداً FLOODWAITERROR خطأ من التيليجرام**")
         await edit_delete(event, "**⌯︙تم الانتحال بنجاح ✓**")
-        base64m = 'QGplcHRob24='
+        base64m = 'QFJJQ0tUSE9O'
         message = base64.b64decode(base64m)
         messageo = message.decode()
         if len(messageo) != 8:
