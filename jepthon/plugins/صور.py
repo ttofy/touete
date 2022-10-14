@@ -1,5 +1,8 @@
+import contextlib
 import os
 import shutil
+
+from telethon.errors.rpcerrorlist import MediaEmptyError
 
 from jepthon import jepiq
 
@@ -18,9 +21,9 @@ plugin_category = "misc"
         "description": "To search images in google. By default will send 3 images.you can get more images(upto 10 only by changing limit value as shown in usage and examples.",
         "usage": ["{tr}img <1-10> <query>", "{tr}img <query>"],
         "examples": [
-            "{tr}img 10 JepThon",
-            "{tr}img JepThon ",
-            "{tr}img 7 JepThon ",
+            "{tr}img 10 catuserbot",
+            "{tr}img catuserbot",
+            "{tr}img 7 catuserbot",
         ],
     },
 )
@@ -34,29 +37,35 @@ async def img_sampler(event):
         query = str(event.pattern_match.group(2))
     if not query:
         return await edit_or_reply(
-            event, "**يجب كـتابة نـص او بالـرد عـلى نـص اولا ⌬**"
+            event, "** ⌯︙قم بكتابة النص مع الامر او بالرد على النص **"
         )
-    cat = await edit_or_reply(event, "**⌯︙يـتم الـتعـرف انتـظر قلـيلا ⏱")
+    cat = await edit_or_reply(event, "** ⌯︙ جارِ البحث عن الصور انتظر قليلاً ✓ **")
     if event.pattern_match.group(1) != "":
         lim = int(event.pattern_match.group(1))
-        if lim > 10:
-            lim = int(10)
+        lim = min(lim, 10)
         if lim <= 0:
-            lim = int(1)
+            lim = 1
     else:
-        lim = int(3)
+        lim = 3
     response = googleimagesdownload()
+    # creating list of arguments
     arguments = {
-        "keywords": query,
+        "keywords": query.replace(",", " "),
         "limit": lim,
         "format": "jpg",
         "no_directory": "no_directory",
     }
+    # passing the arguments to the function
     try:
         paths = response.download(arguments)
     except Exception as e:
-        return await cat.edit(f"**خـطـأ**: \n`{e}`")
-    lst = paths[0][query]
-    await event.client.send_file(event.chat_id, lst, reply_to=reply_to_id)
+        return await cat.edit(f"خطأ: \n`{e}`")
+    lst = paths[0][query.replace(",", " ")]
+    try:
+        await event.client.send_file(event.chat_id, lst, reply_to=reply_to_id)
+    except MediaEmptyError:
+        for i in lst:
+            with contextlib.suppress(MediaEmptyError):
+                await event.client.send_file(event.chat_id, i, reply_to=reply_to_id)
     shutil.rmtree(os.path.dirname(os.path.abspath(lst[0])))
     await cat.delete()
