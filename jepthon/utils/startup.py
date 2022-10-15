@@ -72,7 +72,7 @@ async def startupmessage():
         if BOTLOG:
             Config.CATUBLOGO = await jepiq.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/4ed13bf6216c070e3cc48.jpg",
+                "https://telegra.ph/file/554ba573fd17d63c6f5f1.jpg",
                 caption="**᯽︙ بــوت ريك ثون يـعـمـل بـنـجـاح ✓ **\n**᯽︙ ارسل `.الاوامر` لرؤية اوامر السورس**",
                 buttons=[(Button.url("كروب ريك ثون", "https://t.me/rickthon_group"),)],
             )
