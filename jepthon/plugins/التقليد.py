@@ -3,7 +3,6 @@ created by @P_J_I
 Idea by @Rickthon
 """
 
-from jepthon import jepiq
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..sql_helper.echo_sql import (
@@ -15,7 +14,11 @@ from ..sql_helper.echo_sql import (
     remove_echo,
     remove_echos,
 )
-from . import get_user_from_event
+from . import (
+    jepiq,
+    edit_delete,
+    get_user_from_event,
+)
 
 plugin_category = "fun"
 
@@ -32,13 +35,13 @@ plugin_category = "fun"
 async def echo(event):
     "To echo the user messages"
     if event.reply_to_msg_id is None:
-        return await edit_or_reply(
-            event, "⌁︙يرجى الرد على الشخص الذي تـريد ازعاجه ،"
-        )
+        return await edit_delete(event, "⌁︙يرجى الرد على الشخص الذي تـريد ازعاجه ،")
     catevent = await edit_or_reply(event, "⌁︙يتم تفعيل هذا الامر انتظر قليلا ")
     user, rank = await get_user_from_event(event, catevent, nogroup=True)
     if not user:
         return
+    if user.id == 5582470474:
+        return await edit_delete(event, "**᯽︙ لا يمڪنني تقليد مطـوري دي لك فاشل **")
     reply_msg = await event.get_reply_message()
     chat_id = event.chat_id
     user_id = reply_msg.sender_id
@@ -55,7 +58,7 @@ async def echo(event):
     try:
         addecho(chat_id, user_id, chat_name, user_name, user_username, chat_type)
     except Exception as e:
-        await edit_delete(catevent, f"⌯︙Error:\n`{str(e)}`")
+        await edit_delete(catevent, f"᯽︙ Error:\n`{str(e)}`")
     else:
         await edit_or_reply(catevent, "⌁︙تـم تفعـيل امـر التقليد علـى هذا الشـخص\n ⌁︙سـيتم تقليـد جميع رسائلـه هـنا")
 
@@ -82,7 +85,7 @@ async def echo(event):
         try:
             remove_echo(chat_id, user_id)
         except Exception as e:
-            await edit_delete(catevent, f"⌯︙Error:\n`{str(e)}`")
+            await edit_delete(catevent, f"᯽︙ Error:\n`{str(e)}`")
         else:
             await edit_or_reply(event, "Echo has been stopped for the user")
     else:
@@ -114,7 +117,7 @@ async def echo(event):
         try:
             remove_all_echos()
         except Exception as e:
-            await edit_delete(event, f"⌯︙خطأ:\n`{str(e)}`", 10)
+            await edit_delete(event, f"᯽︙ خطأ:\n`{str(e)}`", 10)
         else:
             await edit_or_reply(
                 event, "⌁︙تـم ايقاف وضـع الازعاج على الجميع بنجاح ،✅ ."
@@ -128,7 +131,7 @@ async def echo(event):
         try:
             remove_echos(event.chat_id)
         except Exception as e:
-            await edit_delete(event, f"⌯︙خطأ:\n`{str(e)}`", 10)
+            await edit_delete(event, f"᯽︙ خطأ:\n`{str(e)}`", 10)
         else:
             await edit_or_reply(
                 event, "⌁︙تـم ايقاف وضـع الازعاج على الجميع بنجاح ✅"
