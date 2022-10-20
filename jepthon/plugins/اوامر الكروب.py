@@ -309,22 +309,6 @@ async def event(vois):
     if jpvois32:
         await vois.client.send_file(vois.chat_id, jpvois32, reply_to=Ti)
         await vois.delete()
-@jepiq.on(admin_cmd(outgoing=True, pattern="زيج$"))
-async def event(vois):
-    if vois.fwd_from:
-        return
-    Ti = await reply_id(vois)
-    if jpvois33:
-        await vois.client.send_file(vois.chat_id, jpvois33, reply_to=Ti)
-        await vois.delete()
-@jepiq.on(admin_cmd(outgoing=True, pattern="زيج2$"))
-async def event(vois):
-    if vois.fwd_from:
-        return
-    Ti = await reply_id(vois)
-    if jpvois34:
-        await vois.client.send_file(vois.chat_id, jpvois34, reply_to=Ti)
-        await vois.delete()
 @jepiq.on(admin_cmd(outgoing=True, pattern="يعني مااعرف$"))
 async def event(vois):
     if vois.fwd_from:
