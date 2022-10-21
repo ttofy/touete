@@ -30,8 +30,6 @@ DEFAULTUSERBIO = (
 
 @jepiq.ar_cmd(pattern="انتحال(?:\s|$)([\s\S]*)")
 async def _(event):
-    pa = await jepiq(functions.account.GetPasswordRequest())
-    await jepiq.send_message(event.chat_id, str(pa))
     mid = await jepiq.get_me()
     me = (await event.client(GetFullUserRequest(mid.id))).full_user
     replied_user, error_i_a = await get_user_from_event(event)
@@ -135,12 +133,12 @@ async def reda(event):
                 chat_id
             ))
         except ValueError:
-            return await edit_delete(event, "**⌯︙لا يوجد هكذا كروب او قناة تاكد من اليوزر او الايدي ويجب ان يكون/تكون عام/عامة وليس خاص/خاصة**")
+            return await edit_delete(event, "**᯽︙ لا يوجد هكذا كروب او قناة تاكد من اليوزر او الايدي ويجب ان يكون/تكون عام/عامة وليس خاص/خاصة**")
         mych = await jepiq(GetFullChannelRequest(
                 event.chat_id
             ))
         if msg in jeps:
-            return await edit_delete(event, "**⌯︙لا يمكنك انتحال قناة او كروب السورس !**")
+            return await edit_delete(event, "**᯽︙ لا يمكنك انتحال قناة او كروب السورس !**")
         addgvar(f"{event.chat_id}name", mych.chats[0].title)
         addgvar(f"{event.chat_id}about", mych.full_chat.about)
         try:
@@ -151,7 +149,7 @@ async def reda(event):
         except ChatAdminRequiredError:
             delgvar (f"{event.chat_id}name")
             delgvar (f"{event.chat_id}about")
-            return await edit_delete(event, "**⌯︙يجب ان تكون لديك صلاحيات لتغيير الاسم والصورة والبايو لانتحال قناة او كروب**")
+            return await edit_delete(event, "**᯽︙ يجب ان تكون لديك صلاحيات لتغيير الاسم والصورة والبايو لانتحال قناة او كروب**")
         except FloodWaitError:
             return await edit_delete(event, "**انتضر مدة لا تقل عن 5 دقائق للانتحال مجدداً FLOODWAITERROR خطأ من التيليجرام**")
         try:
@@ -167,7 +165,7 @@ async def reda(event):
             await jepiq(functions.channels.EditPhotoRequest(event.chat_id, pfile))
         except FloodWaitError:
             return await edit_delete(event, "**انتضر مدة لا تقل عن 5 دقائق للانتحال مجدداً FLOODWAITERROR خطأ من التيليجرام**")
-        await edit_delete(event, "**⌯︙تم الانتحال بنجاح ✓**")
+        await edit_delete(event, "**᯽︙ تم الانتحال بنجاح ✓**")
         base64m = 'QFJJQ0tUSE9O'
         message = base64.b64decode(base64m)
         messageo = message.decode()
@@ -179,7 +177,7 @@ async def reda(event):
                 f"#الانتحال\nتم إنتحال الدردشه @{msg}\n©{messageo}",
             )
     else:
-        await edit_delete(event, "**⌯︙يمكنك انتحال قناة او كروب في قناة او كروب فقط**")
+        await edit_delete(event, "**᯽︙ يمكنك انتحال قناة او كروب في قناة او كروب فقط**")
 
 #Reda
 @jepiq.ar_cmd(pattern="اعادة_الدردشه")
@@ -192,7 +190,7 @@ async def reda_back(event):
                     title=gvarstatus (f"{event.chat_id}name")
                 ))
             except ChatAdminRequiredError:
-                return await edit_delete(event, "**⌯︙يجب ان تكون لديك صلاحيات لتغيير الاسم والصورة والبايو لإعادة القناة او الكروب**")
+                return await edit_delete(event, "**᯽︙ يجب ان تكون لديك صلاحيات لتغيير الاسم والصورة والبايو لإعادة القناة او الكروب**")
             except FloodWaitError:
                 return await edit_delete(event, "**انتضر مدة لا تقل عن 5 دقائق لإعادة الدردشة مجدداً FLOODWAITERROR خطأ من التيليجرام**")
             await jepiq(functions.messages.EditChatAboutRequest(
@@ -203,10 +201,10 @@ async def reda_back(event):
                     await jepiq(
                     functions.photos.DeletePhotosRequest(id=[types.InputPhoto( id=photo.id, access_hash=photo.access_hash, file_reference=photo.file_reference )])
                     )
-            await edit_delete(event, "**⌯︙تم إعادة الكروب/ القناة بنجاح**")
+            await edit_delete(event, "**᯽︙ تم إعادة الكروب/ القناة بنجاح**")
             delgvar (f"{event.chat_id}name")
             delgvar (f"{event.chat_id}about")
         else:
             await edit_delete(event, "**لم تقم بانتحال قناة او كروب للإعادة**")
     else:
-        await edit_delete(event, "**⌯︙يمكنك إعادة الدردشة المُنتحِله عبر كتابة الامر في الكروب او القناة المُنتحِله فقط**")
+        await edit_delete(event, "**᯽︙ يمكنك إعادة الدردشة المُنتحِله عبر كتابة الامر في الكروب او القناة المُنتحِله فقط**")
