@@ -111,9 +111,9 @@ async def hne(event):
     
     await event.edit('انتظر...')
 
-    await jepiq.send_file(event.to_id, AiArt(query=command).Generator(),
+    await jepthon.send_file(event.to_id, AiArt(query=command).Generator(),
                            caption=f'Done Art \nArt name : {command}\n\n•••••••••••••••\nBy : @P_J_I , TO @RICKTHON')
-    await jepiq.delete_messages(chat, event.message)
+    await jepthon.delete_messages(chat, event.message)
 @jepiq.on(events.NewMessage(outgoing=True, pattern=r'^\.غرامات'))
 async def bi(event):
     await event.edit('انتظر...')
