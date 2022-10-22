@@ -26,7 +26,7 @@ async def _(event):
         await event.edit(f"- {response.message.message}\n @RICKTHON")
 
 
-@client.on(events.NewMessage(outgoing= True,pattern=r'^\.تيك'))
+@jepiq.on(events.NewMessage(outgoing= True,pattern=r'^\.تيك'))
 async def e(event):
                 chat = event.get_chat()
                 h = event.text
