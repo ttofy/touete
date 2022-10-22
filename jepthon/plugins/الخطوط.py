@@ -1,3 +1,4 @@
+from telethon import events
 from jepthon import jepiq
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from ..core.managers import edit_delete
