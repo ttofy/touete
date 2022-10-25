@@ -211,20 +211,6 @@ async def variable(var):
                 "**⌔∮ تم بنجاح تغيير فار كروب الحفظ\n\n❃ جار اعادة تشغيل السورس انتظر من 2-5 دقائق ليتشغل مره اخرى**",
             )
         heroku_var[variable] = vra
-    if exe == "ميوزك":
-        variable = "PRIVATE_GROUP_BOT_API_ID"
-        await asyncio.sleep(1)
-        if variable in heroku_var:
-            await edit_or_reply(
-                var,
-                "**⌔∮ تم بنجاح تغيير فار كروب الحفظ\n\n❃ جار اعادة تشغيل السورس انتظر من 2-5 دقائق ليتشغل مره اخرى**",
-            )
-        else:
-            await edit_or_reply(
-                var,
-                "**⌔∮ تم بنجاح تغيير فار كروب الحفظ\n\n❃ جار اعادة تشغيل السورس انتظر من 2-5 دقائق ليتشغل مره اخرى**",
-            )
-        heroku_var[variable] = vra
 
 
 @jepiq.ar_cmd(pattern="محو (.*)")
