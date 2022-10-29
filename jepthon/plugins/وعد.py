@@ -1,3 +1,4 @@
+from jepthon import jepiq
 import telethon
 from telethon import events
 from config import *
