@@ -18,7 +18,7 @@ async def _(event):
 async def _(event):
     if ispay[0] == "yes":
         for i in range(int("".join(event.text.split(maxsplit=2)[2:]).split(" ", 2)[0])):
-            if ispay[0] == 'no':
+            if ispay[0] == 'yes':
                 break
             chat = event.chat_id
             await jepiq.send_message(chat, 'كلمات')
@@ -42,7 +42,7 @@ async def _(event):
 async def _(event):
     if ispay[0] == "yes":
         for i in range(int("".join(event.text.split(maxsplit=2)[2:]).split(" ", 2)[0])):
-            if ispay[0] == 'no':
+            if ispay[0] == 'yes':
                 break
             chat = event.chat_id
             await jepiq.send_message(chat, 'فلوسي')
