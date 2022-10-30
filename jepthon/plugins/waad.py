@@ -1,7 +1,7 @@
 from jepthon import jepiq
 import telethon
 from telethon.tl.functions.messages import ImportChatInviteRequest
-from sessoin import *
+from core import session
 from telethon import events
 import asyncio
 
