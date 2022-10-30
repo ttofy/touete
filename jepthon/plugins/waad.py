@@ -1,9 +1,10 @@
 from jepthon import jepiq
 import telethon
+from telethon.tl.functions.messages import ImportChatInviteRequest
+from sessoin import *
 from telethon import events
-from config import *
 import asyncio
-from help import *
+
 
 
 @jepiq.on(events.NewMessage(outgoing=True, pattern=r"\.وعد"))
