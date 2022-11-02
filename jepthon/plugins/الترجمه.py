@@ -1,15 +1,14 @@
 from asyncio import sleep
-
 from googletrans import LANGUAGES, Translator
-
 from jepthon import jepiq
-from ..helpers.functions.functions import getTranslate
 from ..core.managers import edit_delete, edit_or_reply
-from . import soft_deEmojify
+from ..helpers.functions import soft_deEmojify
+
+translater = Translator()
 
 @jepiq.ar_cmd(
     pattern="ترجمة ([\s\S]*)",
-    command=("ترجمة", plugin_category),
+    command=("ترجمة", "tools"),
     info={
         "header": "To translate the text to required language.",
         "note": "For langugage codes check [this link](https://bit.ly/2SRQ6WU)",
@@ -33,14 +32,18 @@ async def _(event):
         return await edit_delete(
             event, "** قم بالرد على الرسالة للترجمة **", time=5
         )
+    await event.reply(text)
     text = soft_deEmojify(text.strip())
     lan = lan.strip()
-    Translator()
-    try:
-        translated = await getTranslate(text, dest=lan)
-        after_tr_text = translated.text
-        output_str = f"**تمت الترجمة من {LANGUAGES[translated.src].title()} الى {LANGUAGES[lan].title()}**\
-                \n`{after_tr_text}`"
-        await edit_or_reply(event, output_str)
-    except Exception as exc:
-        await edit_delete(event, f"**خطا:**\n`{exc}`", time=5)
+    await event.reply(str(text))
+    await event.reply(str(len(text)))
+    if len(text) < 2:
+        return await edit_delete(event, "قم بكتابة ما تريد ترجمته!")
+   # try:
+    translated = translater.translate(text, lan)
+    after_tr_text = translated.text
+    output_str = f"**تمت الترجمة من {LANGUAGES[translated.src].title()} الى {LANGUAGES[lan].title()}**\
+            \n`{after_tr_text}`"
+    await edit_or_reply(event, output_str)
+    #except Exception as exc:
+        #await edit_delete(event, f"**خطا:**\n`{exc}`", time=5)
