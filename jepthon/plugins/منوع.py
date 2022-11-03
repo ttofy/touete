@@ -65,8 +65,8 @@ R = [
     "  ⓱ **⪼**  [جيت واي 🚨](https://t.me/gamee?game=Getaway)   \n"
     "  ⓲ **⪼**  [الالـوان 🔮](https://t.me/gamee?game=ColorHit)   \n"
     "  ⓳ **⪼**  [مدفع الكرات🏮](https://t.me/gamee?game=NeonBlaster)   \n"
-    "**-** مطور السورس **⪼ [𐇮 𓂐 𓆩SAIF𓆪 𖠛 ](t.me/P_J_I)   \n"
-    "**-** قناة السورس **⪼ [𐇮 ريك ثون العربي ](t.me/Rickthon)   "
+    "**-** مطور السورس **⪼ [𐇮 𓂐 𓆩𓆪 𖠛 ](t.me/oQooo)   \n"
+    "**-** قناة السورس **⪼ [𐇮تويتي العربي ](t.me/ooobo)   "
 ]
 
 @jepiq.on(admin_cmd(pattern="بلي$"))
