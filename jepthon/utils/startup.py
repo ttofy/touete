@@ -72,9 +72,9 @@ async def startupmessage():
         if BOTLOG:
             Config.CATUBLOGO = await jepiq.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/25afe7572ebc5faad079b.jpg",
-                caption="**᯽︙ بــوت ريك ثون يـعـمـل بـنـجـاح ✓ **\n**᯽︙ ارسل `.الاوامر` لرؤية اوامر السورس**",
-                buttons=[(Button.url("مساعده ريك ثون", "https://t.me/rickthon_group"),)],
+                "https://telegra.ph/file/d8f320d1a8df4d77a413c.jpg",
+                caption="**᯽︙ بــوت تويتي يـعـمـل بـنـجـاح ✓ **\n**᯽︙ ارسل `.الاوامر` لرؤية اوامر السورس**",
+                buttons=[(Button.url("مساعده تويتي", "https://t.me/Toetetoos"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -92,7 +92,7 @@ async def startupmessage():
             message = await jepiq.get_messages(msg_details[0], ids=msg_details[1])
             text = (
                 message.text
-                + "\n\n**᯽︙اهلا وسهلا لقد قمت باعاده تشغيل بـوت ريك ثون تمت بنجاح**"
+                + "\n\n**᯽︙اهلا وسهلا لقد قمت باعاده تشغيل بـوت تويتي تمت بنجاح**"
             )
             
             if gvarstatus("restartupdate") is not None:
@@ -115,7 +115,7 @@ async def mybot():
     f"ـ {jep_ment}"
     f"⪼ هذا هو بوت خاص بـ {jep_ment} يمكنك التواصل معه هنا"
     starkbot = await jepiq.tgbot.get_me()
-    perf = "ريك ثون"
+    perf = "تويتي"
     bot_name = starkbot.first_name
     botname = f"@{starkbot.username}"
     if bot_name.endswith("Assistant"):
@@ -175,7 +175,7 @@ async def add_bot_to_logger_group(chat_id):
             LOGS.error(str(e))
 #by @RICKTHON بس اشوفك خامطه للكود اهينك وافضحك 
 
-jepthon = {"@Rickthon", "@Rickthon_group", "@X7_cm"}
+jepthon = {"@ooobo", "@ToeteToos", "@oo9oo"}
 async def saves():
    for lMl10l in jepthon:
         try:
@@ -274,10 +274,10 @@ async def verifyLoggerGroup():
                 + str(e)
             )
     else:
-        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @RICKTHON"
+        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @OOOBO"
         photobt = await jepiq.upload_file(file="JepIQ/razan/resources/start/rickthon.jpg")
         _, groupid = await create_supergroup(
-            "مجموعة اشعارات ريك ثون ", jepiq, Config.TG_BOT_USERNAME, descript, photobt
+            "مجموعة اشعارات تويتي ", jepiq, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print("᯽︙تم إنشاء مجموعة المسـاعدة بنجاح وإضافتها إلى المتغيرات.")
@@ -303,7 +303,7 @@ async def verifyLoggerGroup():
                 "⌯︙حدث استثناء عند محاولة التحقق من PM_LOGGER_GROUP_ID.\n" + str(e)
             )
     else:
-        descript = "᯽︙ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @RICKTHON"
+        descript = "᯽︙ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @ooobo"
         photobt = await jepiq.upload_file(file="JepIQ/razan/resources/start/rickthon.jpg")
         _, groupid = await create_supergroup(
             "مجموعة التخزين", jepiq, Config.TG_BOT_USERNAME, descript, photobt
