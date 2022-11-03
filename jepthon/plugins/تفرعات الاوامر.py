@@ -6,10 +6,10 @@ import random
 from telethon import events
 import random, re
 
-from ooobo.utils import admin_cmd
+from jepthon.utils import admin_cmd
 
 import asyncio
-from ooobo import jepiq
+from jepthon import jepiq
 
 from ..core.managers import edit_or_reply
 
