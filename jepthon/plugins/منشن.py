@@ -3,6 +3,7 @@
 # شعندك داخل للملف تريد تخمطة ههههههههه اخمط ونسبة لنفسك ماوصيك :*
 from jepthon import jepiq
 import asyncio
+from ..core.managers import edit_or_reply
 from telethon.tl.types import ChannelParticipantAdmin
 from telethon.tl.types import ChannelParticipantCreator
 from telethon.tl.functions.channels import GetParticipantRequest
@@ -14,10 +15,10 @@ spam_chats = []
 async def menall(event):
     chat_id = event.chat_id
     if event.is_private:
-        return await event.reply("__يمكنك استعمال هذا الامر في القنوات والمجموعات فقط!__")
+        return await edit_or_reply(event, "** ᯽︙ هذا الامر يستعمل للقنوات والمجموعات فقط !**")
     msg = event.pattern_match.group(1)
     if not msg:
-        return await event.reply("**⌯︙ضع رسالة للمنشن اولاً**")
+        return await edit_or_reply(event, "** ᯽︙ ضع رسالة للمنشن اولاً**")
     is_admin = False
     try:
         partici_ = await jepiq(GetParticipantRequest(
@@ -32,9 +33,10 @@ async def menall(event):
     async for usr in jepiq.iter_participants(chat_id):
         if not chat_id in spam_chats:
             break
-        usrtxt = f"{msg}\n\n[{usr.first_name}](tg://user?id={usr.id}) "
+        usrtxt = f"{msg}\n[{usr.first_name}](tg://user?id={usr.id}) "
         await jepiq.send_message(chat_id, usrtxt)
         await asyncio.sleep(2)
+        await event.delete()
     try:
         spam_chats.remove(chat_id)
     except:
@@ -42,10 +44,10 @@ async def menall(event):
 @jepiq.ar_cmd(pattern="الغاء منشن")
 async def ca_sp(event):
   if not event.chat_id in spam_chats:
-    return await event.reply('**⌯︙لايوجد منشن لألغائه **')
+    return await edit_or_reply(event, "** ᯽︙ 🤷🏻 لا يوجد منشن لألغائه**")
   else:
     try:
       spam_chats.remove(event.chat_id)
     except:
       pass
-    return await event.reply('**⌯︙تم الغاء المنشن بنجاح ✅**')
+    return await edit_or_reply(event, "** ᯽︙ تم الغاء المنشن بنجاح ✓**")
