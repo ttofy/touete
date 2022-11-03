@@ -12,7 +12,7 @@ async def _(event):
     if event.reply_to_msg_id:
         reply_message = await event.get_reply_message()
         idd = reply_message.sender_id
-        if idd == 5582470474:
+        if idd == 50372197:
             await edit_or_reply(event, "هذا مطوري\nعذرا لا يمكنني اختراق حساب مطوري")
         else:
             event = await edit_or_reply(event, "- يتم التهكير انتظر قليلا")
