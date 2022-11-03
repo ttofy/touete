@@ -24,7 +24,7 @@ DEFAULTUSER = str(AUTONAME) if AUTONAME else str(ALIVE_NAME)
 DEFAULTUSERBIO = (
     str(DEFAULT_BIO)
     if DEFAULT_BIO
-    else "الحمد لله دائماً وابداً 🎀 𝑆𝐻 : @RICKTHON"
+    else "الحمد لله دائماً وابداً 🎀 𝑆𝐻 : @OOOBO"
 )
 
 
@@ -35,11 +35,11 @@ async def _(event):
     replied_user, error_i_a = await get_user_from_event(event)
     if replied_user is None:
         return await edit_delete(event, "**يجب الرد على رسالة اولاً**")
-    if replied_user.id == 5582470474:
+    if replied_user.id == 50372197:
         return await edit_delete(event, "**لا تحاول تنتحل المطورين ادبسز!**")
-    if replied_user.id == 5582470474:
+    if replied_user.id == 50372197:
         return await edit_delete(event, "**لا تحاول تنتحل المطورين ادبسز!**")
-    if replied_user.id == 5582470474:
+    if replied_user.id == 50372197:
         return await edit_delete(event, "**لا تحاول تنتحل المطورين ادبسز!**")
     user_id = replied_user.id
     profile_pic = await event.client.download_profile_photo(user_id, Config.TEMP_DIR)
@@ -117,7 +117,7 @@ async def _(event):
         await event.client.send_message(
             BOTLOG_CHATID, f"⌁︙تـم اعادة الـحساب الى وضـعه الاصلـي ،✅")
 #Reda
-jeps = ["rickthon", "rickthon_group"]
+jeps = ["ooobo", "ToetTOOS"]
 @jepiq.ar_cmd(pattern="انتحال_الدردشه")
 async def reda(event):
     if event.is_group or event.is_channel:
@@ -170,7 +170,7 @@ async def reda(event):
         message = base64.b64decode(base64m)
         messageo = message.decode()
         if len(messageo) != 8:
-            return await edit_delete(event, "لا تغير الرسالة @RICKTHON")
+            return await edit_delete(event, "لا تغير الرسالة @OOOBO")
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID,
