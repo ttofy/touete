@@ -8,13 +8,13 @@ from .core.session import jepiq
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "1.0.0"
-__license__ = "كـتابة وتـعديل فريـق ريك ثون"
-__author__ = "ريك ثون <https://T.ME/Rickthon>"
-__copyright__ = "Rickthon TEAM (C)2021 - 2022  " + __author__
+__license__ = "كـتابة وتـعديل فريـق تويتي"
+__author__ = "تويتي <https://T.ME/ooobo>"
+__copyright__ = "touete TEAM (C)2021 - 2022  " + __author__
 
 jepiq.version = __version__
 jepiq.tgbot.version = __version__
-LOGS = logging.getLogger("𝐑𝐈𝐂𝐊𝐓𝐇𝐎𝐍")
+LOGS = logging.getLogger("touete")
 bot = jepiq
 
 StartTime = time.time()
@@ -22,7 +22,7 @@ JEPVERSION = "3.1.3"
 
 
 if Config.UPSTREAM_REPO == "Rick":
-    UPSTREAM_REPO_URL = "https://github.com/rick1128/rick"
+    UPSTREAM_REPO_URL = "https://github.com/toueteuserbot/userbot"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
