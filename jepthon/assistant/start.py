@@ -38,7 +38,7 @@ async def start(event):
             buttons=[
                                      [Button.inline("عرض المستخدمين 📬", data="users"), Button.inline(
                                          "اوامر البـوت ⚒️", data="gibcmd")],
-                                     [Button.url("المطـور 🔗", "https://t.me/P_J_I"), Button.inline(
+                                     [Button.url("المطـور 🔗", "https://t.me/oQooo"), Button.inline(
                                          "اوامر الزغـرفة", data="rozzag")],
 
                                  ])
@@ -53,7 +53,7 @@ async def start(event):
             link_preview=False,
             buttons=[
                 [custom.Button.inline("تنـصيب ريك ثون  🐍", data="deploy")],
-                [Button.url("تحتاج مسـاعدة ❓", "https://t.me/P_J_I")],
+                [Button.url("تحتاج مسـاعدة ❓", "https://t.me/oQooo")],
             ],
         )
 
@@ -68,7 +68,7 @@ async def help(event):
             message="**لتـنصيب البـوت الخاص بك اتبـع الخطـوات في الاسفـل وحاول واذا لم تستطيع تفضل الى مجموعة المساعدة ليساعدوك 🧸♥**.",
             buttons=[
                 [Button.url("شرح التنصيب 📺", "https://youtu.be/eXaxtjZPEj8")],
-                [Button.url("كروب المساعدة ❓", "https://t.me/Rickthon_group")],
+                [Button.url("كروب المساعدة ❓", "https://t.me/ToeteToss")],
             ],
         )
 
