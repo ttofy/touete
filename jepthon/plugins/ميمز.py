@@ -23,7 +23,7 @@ async def _(event):
         except YouBlockedUserError:
             await event.edit("** اولا الغي حظر @SpamBot وحاول مجددا**")
             return
-        await event.edit(f"- {response.message.message}\n @RICKTHON")
+        await event.edit(f"- {response.message.message}\n @ooobo")
 
 #ها
 @jepiq.on(events.NewMessage(outgoing= True,pattern=r'^\.تيك'))
@@ -102,7 +102,7 @@ async def e(event):
 
 • iD : {uid}
 = = = = = = = = = = = = = = = = = = = = 
-By : @P_J_I To : @RICKTHON''')
+By : @ToeteToos To : @ooobo''')
 
 @jepiq.on(events.NewMessage(outgoing=True, pattern=r'^\.ذكاء'))
 async def hne(event):
@@ -222,26 +222,26 @@ async def _(event):
 async def jepvois(vois):
   rl = random.randint(3,267)
   url = f"https://t.me/DwDi1/{rl}"
-  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @RICKTHON 🎀",parse_mode="html")
+  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @ooobo 🎀",parse_mode="html")
   await vois.delete()
 
 @jepiq.on(admin_cmd(outgoing=True, pattern="شعر$"))
 async def jepvois(vois):
   rl = random.randint(2,101)
   url = f"https://t.me/L1BBBL/{rl}"
-  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @RICKTHON 🎀",parse_mode="html")
+  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @ooobo 🎀",parse_mode="html")
   await vois.delete()
 @jepiq.on(admin_cmd(outgoing=True, pattern="قران$"))
 async def jepvois(vois):
   rl = random.randint(2,101)
   url = f"https://t.me/QuraanJep/{rl}"
-  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @RICKTHON 🤲🏻☪️",parse_mode="html")
+  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @ooobo 🤲🏻☪️",parse_mode="html")
   await vois.delete()
 @jepiq.on(admin_cmd(outgoing=True, pattern="ثيم$"))
 async def jepThe(theme):
   rl = random.randint(2,510)
   url = f"https://t.me/GSSSD/{rl}"
-  await theme.client.send_file(theme.chat_id,url,caption="᯽︙ THEME BY : @RICKTHON 🎊",parse_mode="html")
+  await theme.client.send_file(theme.chat_id,url,caption="᯽︙ THEME BY : @ooobo 🎊",parse_mode="html")
   await theme.delete()
 @jepiq.on(admin_cmd(outgoing=True, pattern="لاتغلط$"))
 async def jepmeme(memejep):
